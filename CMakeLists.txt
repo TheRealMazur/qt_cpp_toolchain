@@ -45,17 +45,15 @@ endif()
 set(CONAN_EXTRA_REQUIRES "")
 set(CONAN_EXTRA_OPTIONS "")
 
-if(ENABLE_TESTING)
-  set(CONAN_EXTRA_REQUIRES ${CONAN_EXTRA_REQUIRES}
-                           gtest/1.8.1@bincrafters/stable)
-  enable_testing()
-  message(
-    "Building Tests."
-  )
-  add_subdirectory(test)
-endif()
-
 include(cmake/Conan.cmake)
 run_conan()
+
+include_directories(src)
+
+if(ENABLE_TESTING)
+  enable_testing()
+  message("Building Tests.")
+  add_subdirectory(test)
+endif()
 
 add_subdirectory(src)
