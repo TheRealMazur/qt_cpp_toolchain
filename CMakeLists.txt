@@ -8,7 +8,7 @@ include(cmake/StandardProjectSettings.cmake)
 option(FORCE_OUT_OF_SOURCE_BUILD "Force out-of-source build" ON)
 if(FORCE_OUT_OF_SOURCE_BUILD)
   include(cmake/MacroOutOfSourceBuild.cmake)
-  string(CONCAT MSG "${PROJECT_NAME} by default enforces an out of source build.\n";
+  string(CONCAT MSG "${PROJECT_NAME} by default enforces an out of source build.\n" ;
                 "You can disable this by setting FORCE_OUT_OF_SOURCE_BUILD to OFF.\n")
   macro_ensure_out_of_source_build(${MSG})
 endif()
