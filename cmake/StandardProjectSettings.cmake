@@ -10,6 +10,13 @@ if(NOT CMAKE_BUILD_TYPE AND NOT CMAKE_CONFIGURATION_TYPES)
                                                "MinSizeRel" "RelWithDebInfo")
 endif()
 
+# Option to build in a subdirectory
+option(BUILD_IN_SUBDIR "Build in subdirectory" ON)
+if (BUILD_IN_SUBDIR)
+  make_directory(build)
+  set(CMAKE_BINARY_DIR ${CMAKE_BINARY_DIR}/build)
+endif()
+
 find_program(CCACHE ccache)
 if(CCACHE)
   message("using ccache")

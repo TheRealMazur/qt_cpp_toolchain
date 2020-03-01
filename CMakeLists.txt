@@ -39,7 +39,6 @@ if (ENABLE_PCH)
   target_precompile_headers(project_options INTERFACE <vector> <string> <map> <utility>)
 endif()
 
-
 # Set up some extra Conan dependencies based on our needs
 # before loading Conan
 set(CONAN_EXTRA_REQUIRES "")
