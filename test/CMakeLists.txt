@@ -16,7 +16,7 @@ target_link_libraries(
   PRIVATE project_warnings project_options
   PUBLIC ${CMAKE_PROJECT_NAME}_lib CONAN_PKG::gtest)
 
-target_include_directories(${BINARY} PRIVATE ${CONAN_GTEST_ROOT}/include)
+target_include_directories(${BINARY} PRIVATE ${CONAN_INCLUDE_DIRS_GTEST})
 
 gtest_discover_tests(
   ${BINARY}

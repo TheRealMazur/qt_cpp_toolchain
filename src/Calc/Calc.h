@@ -4,7 +4,7 @@
 namespace Calc {
 
 int square(const int number);
-float squareRoot(const int number);
+double squareRoot(const int number);
 
 }// namespace Calc
 

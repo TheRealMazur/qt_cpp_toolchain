@@ -8,7 +8,7 @@ int square(const int number)
   return number * number;
 }
 
-float squareRoot(const int number)
+double squareRoot(const int number)
 {
   return sqrt(number);
 }

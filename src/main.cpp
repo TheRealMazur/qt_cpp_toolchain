@@ -1,13 +1,11 @@
-#include <iostream>
-#include <string>
-#include "Calc/Calc.h"
+#include "GUI/HelloQt.h"
+#include <QApplication>
 
-int main()
+int main(int argc, char *argv[])
 {
-  int number;
-  std::cout << "Please input an integer:\n";
-  std::cin >> number;
-  std::cout << "Square of: " << number << " is: " << Calc::square(number) << '\n';
-  std::cout << "Square root of: " << number << " is: " << Calc::squareRoot(number) << '\n';
-  return 0;
+  QApplication app(argc, argv);
+  HelloQt dialog;
+  dialog.show();
+
+  return app.exec();// this runs the main event loop and sees to it that cleanup is done
 }

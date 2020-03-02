@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.16)
 
 # Set the project name
 project(QtCppToolchain CXX)
+
 include(cmake/StandardProjectSettings.cmake)
 
 # Force an out-of-source build of the code by default
@@ -47,7 +48,7 @@ if(ENABLE_PCH)
 endif()
 
 # Set up some extra Conan dependencies based on our needs before loading Conan
-set(CONAN_EXTRA_REQUIRES "")
+set(CONAN_EXTRA_REQUIRES "gtest/1.8.1@bincrafters/stable" "qt/5.14.1@bincrafters/stable")
 set(CONAN_EXTRA_OPTIONS "")
 
 include(cmake/Conan.cmake)
