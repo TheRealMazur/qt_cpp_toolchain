@@ -1,0 +1,10 @@
+[generators]
+cmake
+
+[requires]
+gtest/1.8.1@bincrafters/stable
+qt/5.14.1@bincrafters/stable
+
+[options]
+
+[imports]

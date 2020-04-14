@@ -14,6 +14,7 @@ conan_add_remote(NAME bincrafters URL
                  https://api.bintray.com/conan/bincrafters/public-conan)
 
 conan_cmake_run(
+  CONANFILE conanfile.txt # Comment this line out to generate conanfile automatically
   REQUIRES
   ${CONAN_EXTRA_REQUIRES}
   OPTIONS
